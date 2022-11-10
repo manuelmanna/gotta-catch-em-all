@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -6,5 +7,38 @@
     width: 100vw;
     height: 100vh;
     background: rgb(238,244,255);
-background: linear-gradient(180deg, rgba(238,244,255,1) 0%, rgba(222,233,255,1) 100%);
+    background: linear-gradient(180deg, rgba(238,244,255,1) 0%, rgba(222,233,255,1) 100%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.font-inter{
+    font-family: 'Inter', sans-serif;
+}
+.font-wight-normal{
+    font-weight: normal;
+}
+.font-weight-bold{
+    font-weight: bold;
+}
+.font-size-44{
+    font-size: 44px;
+}
+.font-size-18{
+    font-size: 18px;
+}
+.font-size-14{
+    font-size: 14px;
+}
+.font-size-24{
+    font-size: 24px;
+}
+.font-size-20{
+    font-size: 20px;
+}
+.font-size-12{
+    font-size: 12px;
+}
+#title{
+    padding-top: 75px;
 }
