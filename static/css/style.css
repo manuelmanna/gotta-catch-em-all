@@ -2,3 +2,9 @@
     margin: 0;
     padding: 0;
 }
+#mainpage{
+    width: 100vw;
+    height: 100vh;
+    background: rgb(238,244,255);
+background: linear-gradient(180deg, rgba(238,244,255,1) 0%, rgba(222,233,255,1) 100%);
+}
