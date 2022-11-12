@@ -1,5 +1,5 @@
 <?php 
-header("Location: ../skels/index.html");
+//header("Location: ../skels/index.html");
 
 //Creazione variabili 
 
@@ -11,4 +11,7 @@ $spdefense=0;
 $speed=0;
 
 
+$csv = array_map('str_getcsv', file('data/pokemon.csv'));
+print_r($csv);
+//(1;1) (721;13)
 ?>
