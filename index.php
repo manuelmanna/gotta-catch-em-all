@@ -10,16 +10,39 @@ $spatt=0;
 $spdefense=0;
 $speed=0;
 
+
+$user_pokemon = [ $hp, $attack, $defense, $spatt, $spdefense, $speed ];
+$distances= array();
+
+// Calcolar dist. euclidea fra $user_pokemon e ciascun pokemon del dataset
+// Inserire per ogni distanza trovata indice del pokemon e distanza in un array inizialmente vuoto
+// Ordinare per distanza l'array così creato (matrice 721 x 2)
+// Prendere i primi K elementi
+// Per ciascuno di K elementi chiamare la funzione getPokemonByPokedexId per creare le card
+
 //presi i valori dal csv 
 $csv = array_map('str_getcsv', file('data/pokemon.csv'));
+
+for ($i = 0; $i < sizeof($csv); $i++){
+    $pokemon = $csv[$i];
+    $pokemondistance=array();
+    array_push($pokemondistance,$pokemon[0]);
+    $pokemonstats=[ $pokemon[5],$pokemon[6],$pokemon[7],$pokemon[8],$pokemon[9],$pokemon[10]];
+    $dist = genericEuclideanDistance($user_pokemon, $pokemonstats);
+    array_push($pokemondistance, $dist)
+    array_push($distances, $pokemondistance);
+
+}
 // print_r($csv);
 // print_r($csv[0]);
-for ($i = 0; $i < sizeof($csv); $i++){
+/*for ($i = 0; $i < sizeof($csv); $i++){
     $pokemon = $csv[$i];
     print("Pokedex id -> " . $pokemon[0] . " ");
     print("Name -> " . $pokemon[1]);
     print("<br />");
-}
+}*/
+
+
 
 function euclideanDistance($point_1, $point_2){
     // $point_1 e $point_2 sono delle strutture che contengono dei numeri -> es. array [2, 5], in generale [x, y]
@@ -29,11 +52,11 @@ function euclideanDistance($point_1, $point_2){
     return $dist;
 }
 
-function getPokemonByPokedexId($id){
+function getPokemonByPokedexId($id, $csv){
     // esplora il dataset e restituisce il pokemon con indice del pokedex pari a $id
     for ($i = 0; $i < sizeof($csv); $i++){
         $pokemon = $csv[$i];
-        print("Pokedex id -> " . $pokemon[0] . " ");
+        //print("Pokedex id -> " . $pokemon[0] . " ");
         if($pokemon[0]==$id){
             return $pokemon;
         }
@@ -52,9 +75,9 @@ function genericEuclideanDistance($point_1, $point_2){
     // ritornare la distanza
     $somma=0;
     for($i=0;$i<sizeof($point_1);$i++){
-        $somma+=pow($point_1[$i]+$point_2[$i],2);
+        $somma+=pow($point_1[$i]-$point_2[$i],2);
     }
-    $dist=sqrt($somma);  
+    return sqrt($somma);  
 }
 
 function distanzaEuclidea($num1,$num2,$length){
@@ -68,6 +91,12 @@ function distanzaEuclidea($num1,$num2,$length){
 
 }
 
-echo distanzaEuclidea(10,5,1);
+//echo distanzaEuclidea(10,5,1);
 //(1;1) (721;13)
+
+$pokemon = getPokemonByPokedexId(721, $csv);
+
+print_r($pokemon);
+print("<br />");
+print(genericEuclideanDistance([4,4, 4, 4], [4, 4, 4, 4]));
 ?>
