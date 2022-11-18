@@ -29,10 +29,12 @@ for ($i = 0; $i < sizeof($csv); $i++){
     array_push($pokemondistance,$pokemon[0]);
     $pokemonstats=[ $pokemon[5],$pokemon[6],$pokemon[7],$pokemon[8],$pokemon[9],$pokemon[10]];
     $dist = genericEuclideanDistance($user_pokemon, $pokemonstats);
-    array_push($pokemondistance, $dist)
+    array_push($pokemondistance, $dist);
     array_push($distances, $pokemondistance);
 
 }
+
+print_r($distances[0]);
 // print_r($csv);
 // print_r($csv[0]);
 /*for ($i = 0; $i < sizeof($csv); $i++){
@@ -96,7 +98,7 @@ function distanzaEuclidea($num1,$num2,$length){
 
 $pokemon = getPokemonByPokedexId(721, $csv);
 
-print_r($pokemon);
+/*print_r($pokemon);
 print("<br />");
-print(genericEuclideanDistance([4,4, 4, 4], [4, 4, 4, 4]));
+print(genericEuclideanDistance([4,4, 4, 4], [4, 4, 4, 4]));*/
 ?>
