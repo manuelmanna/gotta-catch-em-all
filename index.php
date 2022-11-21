@@ -44,11 +44,14 @@ for ($i = 0; $i < sizeof($csv); $i++){
     do
     {
             $scambiato = false;
-            for($i=0;$i<sizeof($distances[0]);$i++){
+            for($i=0;$i<721;$i++){
                 if( $distances[$i][1] > $distances[$i + 1][1] ) {
                     $temp = $distances[$i + 1] [1];
+                    $tempid = $distances[$i + 1] [0];
                     $distances[$i + 1][1] = $distances[$i][1];
+                    $distances[$i + 1][0] = $distances[$i][0];
                     $distances[$i][1]  = $temp;
+                    $distances[$i][0]  = $tempid;
                     $scambiato = true;
                 }
             }
