@@ -3,12 +3,12 @@
 
 //Creazione variabili 
 
-$hp=0;
-$attack=0;
-$defense=0;
-$spatt=0;
-$spdefense=0;
-$speed=0;
+$hp=100;
+$attack=60;
+$defense=80;
+$spatt=60;
+$spdefense=60;
+$speed=50;
 $k = 5;
 
 $user_pokemon = [ $hp, $attack, $defense, $spatt, $spdefense, $speed ];
@@ -61,13 +61,17 @@ for ($i = 0; $i < sizeof($csv); $i++){
 
 
 
-//ho trasformato l'array in un array associativo, dopo aver fatto   
 
+//print_r($distances);
 
-print_r($distances);
-
-//Dobbiamo ordinare l'array in oridne crescente formato da ['id', 'valore']
-
+for($i = 0; $i < $k; $i++){
+    $array = array(getPokemonByPokedexId($distances[$i][0], $csv));
+    print_r($array);
+    print("<br>");
+    print("<img src='../static/images/"  .$array[0][0]. ".jpg'/>");
+    print("<br>");
+    
+}
 
 // print_r($csv);
 // print_r($csv[0]);
@@ -77,8 +81,6 @@ print_r($distances);
     print("Name -> " . $pokemon[1]);
     print("<br />");
 }*/
-
-
 
 function euclideanDistance($point_1, $point_2){
     // $point_1 e $point_2 sono delle strutture che contengono dei numeri -> es. array [2, 5], in generale [x, y]
@@ -130,7 +132,6 @@ function distanzaEuclidea($num1,$num2,$length){
 //echo distanzaEuclidea(10,5,1);
 //(1;1) (721;13)
 
-$pokemon = getPokemonByPokedexId(721, $csv);
 
 /*print_r($pokemon);
 print("<br />");
