@@ -9,7 +9,7 @@ $defense=0;
 $spatt=0;
 $spdefense=0;
 $speed=0;
-
+$k = 5;
 
 $user_pokemon = [ $hp, $attack, $defense, $spatt, $spdefense, $speed ];
 $distances= array();
@@ -32,9 +32,40 @@ for ($i = 0; $i < sizeof($csv); $i++){
     array_push($pokemondistance, $dist);
     array_push($distances, $pokemondistance);
 
+    //$distances[$i]= list("id", "euclid") = [$distances[$i][0] , $distances[$i][1]];
+
+    
+ 
 }
 
-print_r($distances[0]);
+
+//rint_r($distances[2][1]);
+
+    do
+    {
+            $scambiato = false;
+            for($i=0;$i<sizeof($distances[0]);$i++){
+                if( $distances[$i][1] > $distances[$i + 1][1] ) {
+                    $temp = $distances[$i + 1] [1];
+                    $distances[$i + 1][1] = $distances[$i][1];
+                    $distances[$i][1]  = $temp;
+                    $scambiato = true;
+                }
+            }
+    }
+    while($scambiato);
+
+
+
+
+//ho trasformato l'array in un array associativo, dopo aver fatto   
+
+
+print_r($distances);
+
+//Dobbiamo ordinare l'array in oridne crescente formato da ['id', 'valore']
+
+
 // print_r($csv);
 // print_r($csv[0]);
 /*for ($i = 0; $i < sizeof($csv); $i++){
