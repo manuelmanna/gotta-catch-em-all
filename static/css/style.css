@@ -103,3 +103,51 @@ padding-top: 25px;
     padding-left: 12px;
     padding-right: 89px;
 }
+.cardcontainer{
+    background-color: #ffffff;
+    border-radius: 15px;
+    z-index: 0;
+    margin-left: 50px;
+    display: inline-block;
+    margin-top: 39px;
+}
+.container2{
+    display: flex;
+}
+.imgcontainer{
+    z-index: 1;
+    background-color: #E36736;
+    border-top-left-radius: 15px;
+    border-bottom-left-radius: 15px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    padding-left: 18px;
+    padding-right: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.statscotainer{
+    padding-top: 19px;
+    padding-bottom: 19px;
+    padding-left: 21px;
+    padding-right: 60px;
+    font-family: 'Inter', sans-serif;
+}
+.cardstats{
+    display: flex;
+    font-family: 'Inter', sans-serif;
+}
+.cardstats > div{
+    margin-right: 6px;
+    font-family: 'Inter', sans-serif;
+}
+.cardgen{
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+}
+.cardtypes{
+    margin-bottom: 5px;
+    font-family: 'Inter', sans-serif;
+}
