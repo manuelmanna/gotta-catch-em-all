@@ -1,12 +1,12 @@
 <?php 
 //header("Location: ../skels/index.html");
 
-$hp=120;
-$attack=80;
-$defense=20;
-$spatt=50;
-$spdefense=100;
-$speed=100;
+$hp=50;
+$attack=25;
+$defense=28;
+$spatt=45;
+$spdefense=53;
+$speed=15;
 $k = 5;
 
 $user_pokemon = [ $hp, $attack, $defense, $spatt, $spdefense, $speed ];
