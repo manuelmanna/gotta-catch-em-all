@@ -6,5 +6,9 @@
     width: 100vw;
     height: 100vh;
     background: rgb(238,244,255);
-background: linear-gradient(180deg, rgba(238,244,255,1) 0%, rgba(222,233,255,1) 100%);
+    background: linear-gradient(180deg, rgba(238,244,255,1) 0%, rgba(222,233,255,1) 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
