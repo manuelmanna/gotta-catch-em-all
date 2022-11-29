@@ -151,3 +151,6 @@ padding-top: 25px;
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
 }
+    justify-content: center;
+    flex-direction: column;
+}
