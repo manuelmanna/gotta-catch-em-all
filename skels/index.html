@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="it">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,72 +8,176 @@
     <title>Pokemon Search</title>
     <link rel="stylesheet" href="../static/css/style.css">
 </head>
+
 <body>
     <section id="mainpage">
-        <h1 id="title" class="font-inter font-weight-bold font-size-44">Gotta Check’em All</h1>
-        <div id="subtitlecontainer">
-            <p id="subtitle" class="font-inter font-size-18 font-wight-normal"><span class="font-weight-bold">Benvenuto</span> nel tuo motore di ricerca per Pokémon. Potrai inserire le caratteristiche di un <span class="font-weight-bold">Pokémon fittizio</span> e il back-end cercherà grazie all’algoritmo di Machine Learning <span class="font-weight-bold">KNN (K-Nearest Neighbors)</span> i 5 Pokémon più simili a quello che hai inserito.</p>
-        </div>
-     <form>
-        <div class="gruppo-totale-form">
-            <div class="elementi-del-form">
-                <label class="font-weight-bold font-inter" >Punti Vita (HP):</label>
-                <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
+        <div id="content">
+            <h1 id="title" class="font-inter font-weight-bold font-size-44">Gotta Check’em All</h1>
+            <div id="subtitlecontainer">
+                <p id="subtitle" class="font-inter font-size-18 font-wight-normal"><span
+                        class="font-weight-bold">Benvenuto</span> nel tuo motore di ricerca per Pokémon. Potrai inserire
+                    le caratteristiche di un <span class="font-weight-bold">Pokémon fittizio</span> e il back-end
+                    cercherà grazie all’algoritmo di Machine Learning <span class="font-weight-bold">KNN (K-Nearest
+                        Neighbors)</span> i 5 Pokémon più simili a quello che hai inserito.</p>
             </div>
-            <div class="elementi-del-form">
-                <label class="font-weight-bold font-inter">Punti Attacco (Attack):</label>
-                <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
-            </div>
-            <div class="elementi-del-form">
-                <label class="font-weight-bold font-inter">Punti difesa (Defense)</label>
-                <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
-            </div>
-        </div>
-        <div class="gruppo-totale-form">
-            <div class="elementi-del-form">
-                <label class="font-weight-bold font-inter">Punti Attacco Speciale (Sp. Atk):</label>
-                <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
-            </div>
-            <div class="elementi-del-form">    
-                <label class="font-weight-bold font-inter">Punti Difesa Speciale (Sp. Defense):</label>
-                <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
-            </div>
-            <div class="elementi-del-form">    
-                <label class="font-weight-bold font-inter">Punti velocità (Speed)</label>
-                <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
-            </div>
-        </div>
-        <div id="bottone">
-            <button id="cerca" type="submit">CERCA</button>
-        </div>
-    </form>
-    <div class="cardcontainer">
-        <div class="container2">
-            <div class="imgcontainer">
-                <img class="cardimg" src="images/bulbus.png" alt="Immagine del pokemon: {nomepokemon}">
-            </div>
-            <div class="statscotainer">
-                <h3 class="cardname">Bulbasaur</h3>
-                <p class="cardgen">Gen. 1</p>
-                <p class="cardtypes">Tipi: <span class="font-weight-bold">grass, poison</span></p>
-                <div class="cardstats">
-                    <div>
-                        <p>HP <span class="font-weight-bold">45</span></p>
-                        <p>Atk <span class="font-weight-bold">45</span></p>
-                        <p>Def <span class="font-weight-bold">45</span></p>
+            <form>
+                <div class="gruppo-totale-form">
+                    <div class="elementi-del-form">
+                        <label class="font-weight-bold font-inter">Punti Vita (HP):</label>
+                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
                     </div>
-                    <div>
-                        <p>Sp. Atk <span class="font-weight-bold">45</span></p>
-                        <p>Sp. Def <span class="font-weight-bold">45</span></p>
-                        <p>Speed <span class="font-weight-bold">45</span></p>
+                    <div class="elementi-del-form">
+                        <label class="font-weight-bold font-inter">Punti Attacco (Attack):</label>
+                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
+                    </div>
+                    <div class="elementi-del-form">
+                        <label class="font-weight-bold font-inter">Punti difesa (Defense)</label>
+                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
+                    </div>
+                </div>
+                <div class="gruppo-totale-form">
+                    <div class="elementi-del-form">
+                        <label class="font-weight-bold font-inter">Punti Attacco Speciale (Sp. Atk):</label>
+                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
+                    </div>
+                    <div class="elementi-del-form">
+                        <label class="font-weight-bold font-inter">Punti Difesa Speciale (Sp. Defense):</label>
+                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
+                    </div>
+                    <div class="elementi-del-form">
+                        <label class="font-weight-bold font-inter">Punti velocità (Speed)</label>
+                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300"></input>
+                    </div>
+                </div>
+                <div id="bottone">
+                    <button id="cerca" type="submit">CERCA</button>
+                </div>
+            </form>
+            <div id="cardwrap">
+                <div class="cardcontainer">
+                    <div class="container2">
+                        <div class="imgcontainer">
+                            <img class="cardimg" src="../static/images/1.jpg" alt="Immagine del pokemon: {nomepokemon}">
+                        </div>
+                        <div class="statscotainer">
+                            <h3 class="cardname">Bulbasaur</h3>
+                            <p class="cardgen">Gen. 1</p>
+                            <p class="cardtypes">Tipi: <span class="font-weight-bold">grass, poison</span></p>
+                            <div class="cardstats">
+                                <div>
+                                    <p>HP <span class="font-weight-bold">45</span></p>
+                                    <p>Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Def <span class="font-weight-bold">45</span></p>
+                                </div>
+                                <div>
+                                    <p>Sp. Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Sp. Def <span class="font-weight-bold">45</span></p>
+                                    <p>Speed <span class="font-weight-bold">45</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontainer">
+                    <div class="container2">
+                        <div class="imgcontainer">
+                            <img class="cardimg" src="../static/images/1.jpg" alt="Immagine del pokemon: {nomepokemon}">
+                        </div>
+                        <div class="statscotainer">
+                            <h3 class="cardname">Bulbasaur</h3>
+                            <p class="cardgen">Gen. 1</p>
+                            <p class="cardtypes">Tipi: <span class="font-weight-bold">grass, poison</span></p>
+                            <div class="cardstats">
+                                <div>
+                                    <p>HP <span class="font-weight-bold">45</span></p>
+                                    <p>Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Def <span class="font-weight-bold">45</span></p>
+                                </div>
+                                <div>
+                                    <p>Sp. Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Sp. Def <span class="font-weight-bold">45</span></p>
+                                    <p>Speed <span class="font-weight-bold">45</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontainer">
+                    <div class="container2">
+                        <div class="imgcontainer">
+                            <img class="cardimg" src="../static/images/1.jpg" alt="Immagine del pokemon: {nomepokemon}">
+                        </div>
+                        <div class="statscotainer">
+                            <h3 class="cardname">Bulbasaur</h3>
+                            <p class="cardgen">Gen. 1</p>
+                            <p class="cardtypes">Tipi: <span class="font-weight-bold">grass, poison</span></p>
+                            <div class="cardstats">
+                                <div>
+                                    <p>HP <span class="font-weight-bold">45</span></p>
+                                    <p>Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Def <span class="font-weight-bold">45</span></p>
+                                </div>
+                                <div>
+                                    <p>Sp. Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Sp. Def <span class="font-weight-bold">45</span></p>
+                                    <p>Speed <span class="font-weight-bold">45</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontainer">
+                    <div class="container2">
+                        <div class="imgcontainer">
+                            <img class="cardimg" src="../static/images/1.jpg" alt="Immagine del pokemon: {nomepokemon}">
+                        </div>
+                        <div class="statscotainer">
+                            <h3 class="cardname">Bulbasaur</h3>
+                            <p class="cardgen">Gen. 1</p>
+                            <p class="cardtypes">Tipi: <span class="font-weight-bold">grass, poison</span></p>
+                            <div class="cardstats">
+                                <div>
+                                    <p>HP <span class="font-weight-bold">45</span></p>
+                                    <p>Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Def <span class="font-weight-bold">45</span></p>
+                                </div>
+                                <div>
+                                    <p>Sp. Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Sp. Def <span class="font-weight-bold">45</span></p>
+                                    <p>Speed <span class="font-weight-bold">45</span></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cardcontainer">
+                    <div class="container2">
+                        <div class="imgcontainer">
+                            <img class="cardimg" src="../static/images/1.jpg" alt="Immagine del pokemon: {nomepokemon}">
+                        </div>
+                        <div class="statscotainer">
+                            <h3 class="cardname">Bulbasaur</h3>
+                            <p class="cardgen">Gen. 1</p>
+                            <p class="cardtypes">Tipi: <span class="font-weight-bold">grass, poison</span></p>
+                            <div class="cardstats">
+                                <div>
+                                    <p>HP <span class="font-weight-bold">45</span></p>
+                                    <p>Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Def <span class="font-weight-bold">45</span></p>
+                                </div>
+                                <div>
+                                    <p>Sp. Atk <span class="font-weight-bold">45</span></p>
+                                    <p>Sp. Def <span class="font-weight-bold">45</span></p>
+                                    <p>Speed <span class="font-weight-bold">45</span></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        
     </section>
     <script src="../static/js/script.js"></script>
-
-    <img src="../static/js/" alt="">
 </body>
-</html>5x3
+
+</html>

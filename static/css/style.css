@@ -6,11 +6,11 @@
 #mainpage{
     width: 100vw;
     height: 100vh;
-    background: rgb(238,244,255);
     background: linear-gradient(180deg, rgba(238,244,255,1) 0%, rgba(222,233,255,1) 100%);
     display: flex;
     align-items: center;
     flex-direction: column;
+    justify-content: center;
 }
 .font-inter{
     font-family: 'Inter', sans-serif;
@@ -41,6 +41,7 @@
 }
 #title{
     padding-top: 75px;
+    text-align: center;
 }
 #subtitlecontainer{
     padding-top: 30px;
@@ -56,6 +57,7 @@
     flex-direction: column;
     padding-right: 12px;
     justify-content: center;
+    height: 100%;
 }
 form{
     display: flex;
@@ -87,7 +89,7 @@ padding-top: 25px;
     border: 1px solid black;
     font-family: 'Inter', sans-serif;
     font-size: 14px;
-    padding-left: 10px;
+    margin-left: 10px;
     text-align: center;
 }
 
@@ -107,9 +109,7 @@ padding-top: 25px;
     background-color: #ffffff;
     border-radius: 15px;
     z-index: 0;
-    margin-left: 50px;
     display: inline-block;
-    margin-top: 39px;
 }
 .container2{
     display: flex;
@@ -151,6 +151,15 @@ padding-top: 25px;
     margin-bottom: 5px;
     font-family: 'Inter', sans-serif;
 }
-    justify-content: center;
-    flex-direction: column;
+#cardwrap{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 26px;
+    column-gap: 26px;
+    padding-bottom: 30px;
+    margin-top: 39px;
+}
+.cardimg{
+    max-width: 80px;
+    max-height: 80px;
 }
