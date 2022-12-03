@@ -175,10 +175,7 @@
                         }else{
                         echo "Errore i valori inseriti non sono validi";
                         }
-                    }else{
-                        echo "Errore i valori inseriti non sono validi";
                     }
-                    
                     
                     ?>
             </div>
