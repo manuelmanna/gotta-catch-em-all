@@ -20,33 +20,33 @@
                     cercherà grazie all’algoritmo di Machine Learning <span class="font-weight-bold">KNN (K-Nearest
                         Neighbors)</span> i 5 Pokémon più simili a quello che hai inserito.</p>
             </div>
-            <form action="index.php" method="post">
+            <form action="index.php" method="post" id="myForm">
                 <div class="gruppo-totale-form">
                     <div class="elementi-del-form">
                         <label class="font-weight-bold font-inter">Punti Vita (HP):</label>
-                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300" name="hp"></input>
+                        <input id="input"class="controllo" type="text" placeholder="Inserisci un numero da 0 a 300" name="hp"></input>
                     </div>
                     <div class="elementi-del-form">
                         <label class="font-weight-bold font-inter">Punti Attacco (Attack):</label>
-                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300" name="Att"></input>
+                        <input id="input" class="controllo" type="text" placeholder="Inserisci un numero da 0 a 300" name="Att"></input>
                     </div>
                     <div class="elementi-del-form">
                         <label class="font-weight-bold font-inter">Punti difesa (Defense)</label>
-                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300" name="Def"></input>
+                        <input id="input" class="controllo" type="text" placeholder="Inserisci un numero da 0 a 300" name="Def"></input>
                     </div>
                 </div>
                 <div class="gruppo-totale-form">
                     <div class="elementi-del-form">
                         <label class="font-weight-bold font-inter">Punti Attacco Speciale (Sp. Atk):</label>
-                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300" name="SpAtt"></input>
+                        <input id="input" class="controllo" type="text" placeholder="Inserisci un numero da 0 a 300" name="SpAtt"></input>
                     </div>
                     <div class="elementi-del-form">
                         <label class="font-weight-bold font-inter">Punti Difesa Speciale (Sp. Defense):</label>
-                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300" name="SpDef"></input>
+                        <input id="input" class="controllo" type="text" placeholder="Inserisci un numero da 0 a 300" name="SpDef"></input>
                     </div>
                     <div class="elementi-del-form">
                         <label class="font-weight-bold font-inter">Punti velocità (Speed)</label>
-                        <input id="input" type="text" placeholder="Inserisci un numero da 0 a 300" name="speed"></input>
+                        <input id="input" class="controllo" type="text" placeholder="Inserisci un numero da 0 a 300" name="speed"></input>
                     </div>
                 </div>
                 <div id="bottone">
