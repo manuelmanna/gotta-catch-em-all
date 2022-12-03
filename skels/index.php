@@ -137,6 +137,7 @@
                             $user_pokemon = [ $hp, $attack, $defense, $spatt, $spdefense, $speed ];
                             $distances= array();
                             $csv = array_map('str_getcsv', file('../data/pokemon.csv'));
+                            $csvlength = sizeof($csv);
                             
                             
                             for ($i = 0; $i < sizeof($csv); $i++){
@@ -148,10 +149,10 @@
                                 array_push($pokemondistance, $dist);
                                 array_push($distances, $pokemondistance); 
                             }
-                                do
+                               do
                                 {       
                                         $scambiato = false;
-                                        for($i=0;$i<(sizeof($csv)-1);$i++){
+                                        for($i=0;$i<$csvlength-1;$i++){
                                             
                                             if( $distances[$i][1] > $distances[$i + 1][1] ) {
                                                 $temp = $distances[$i + 1] [1];
