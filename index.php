@@ -25,7 +25,7 @@ for ($i = 0; $i < sizeof($csv); $i++){
     do
     {
             $scambiato = false;
-            for($i=0;$i<721;$i++){
+            for($i=0;$i<(sizeof($csv) - 1);$i++){
                 if( $distances[$i][1] > $distances[$i + 1][1] ) {
                     $temp = $distances[$i + 1] [1];
                     $tempid = $distances[$i + 1] [0];
