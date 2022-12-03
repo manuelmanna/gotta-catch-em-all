@@ -132,7 +132,7 @@
                     
                     }
                     
-                    if(!(is_null($hp) && is_null($attack) && is_null($defense) && is_null($spatt) && is_null($spdefense) && is_null($speed))){
+                    
                         if($hp > 0 && $hp <= 300 &&  is_numeric($hp) && $attack > 0 && $attack <= 300 &&  is_numeric($attack)  && $defense > 0 && $defense <= 300 &&  is_numeric($defense)  && $spatt > 0 && $spatt <= 300 &&  is_numeric($spatt)  && $spdefense > 0 && $spdefense <= 300 &&  is_numeric($spdefense)  && $speed > 0 && $speed <= 300 &&  is_numeric($speed)){
                             $user_pokemon = [ $hp, $attack, $defense, $spatt, $spdefense, $speed ];
                             $distances= array();
@@ -169,10 +169,6 @@
                             
                             for($i = 0; $i < $k; $i++){
                                 $array = array(getPokemonByPokedexId($distances[$i][0], $csv));
-                                //print_r($array);
-                                //print("<br>");
-                                //print("<img src='../static/images/"  .$array[0][0]. ".jpg'/>");
-                                //print("<br>");
                                 printCard($array[0][0],$array[0][1],$array[0][11],$array[0][2],$array[0][3],$array[0][5],$array[0][6],$array[0][7],$array[0][8],$array[0][9],$array[0][10]);
                                 
                             }
@@ -182,7 +178,7 @@
                     }else{
                         echo "Errore i valori inseriti non sono validi";
                     }
-                    }
+                    
                     
                     ?>
             </div>
