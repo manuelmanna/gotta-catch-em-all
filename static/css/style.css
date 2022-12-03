@@ -163,3 +163,64 @@ padding-top: 25px;
     max-width: 80px;
     max-height: 80px;
 }
+@media screen and (max-width: 600px) {
+    #cardwrap{
+        display: grid;
+        grid-template-columns: auto;
+        padding-bottom: 100px;
+        margin-top: 39px;
+    }
+    .gruppo-totale-form{
+        flex-direction: column;
+    }
+    .font-size-44{
+        font-size: 30px;
+    }
+    #subtitlecontainer{
+        width: 100%;
+    }
+    .container2{
+        display: block;
+    }
+    .imgcontainer{
+        border-bottom-left-radius: 0px;
+        border-top-right-radius: 15px;
+    }
+    .cardcontainer{
+        margin: 0px 15px;
+    }
+    .cardname{
+        text-align: center;
+    }
+    .statscotainer{
+        padding: 10px 10px 10px 10px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #subtitle{
+        margin: 0px 15px;
+    }
+    .gruppo-totale-form{
+        width: 100%;
+    }
+    .elementi-del-form{
+        margin: 0px 15px;
+        padding-right: 0px;
+    }
+    .elementi-del-form input{
+        width: 100%;
+        margin-left: 0px;
+    }
+    #bottone{
+        width: 100%;    
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    #cerca{
+        width: 100%;
+        margin: 0px 15px;  
+    }
+  }
